@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Un pequeño juego para ti</title>
+
+<style>
+body{
+font-family: Arial, sans-serif;
+background: linear-gradient(135deg,#ff9ecf,#ffd6eb);
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:#333;
+margin:0;
+}
+
+.caja{
+background:white;
+padding:40px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+max-width:420px;
+}
+
+button{
+margin:10px;
+padding:12px 20px;
+font-size:18px;
+border:none;
+border-radius:10px;
+background:#ff4f9a;
+color:white;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+background:#e63e86;
+transform:scale(1.05);
+}
+
+.oculto{
+display:none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="caja">
+
+<h2>🌸 Tengo un pequeño juego para ti</h2>
+
+<p id="texto">Paso 1: Elige un número</p>
+
+<div id="numeros">
+<button onclick="paso2()">1</button>
+<button onclick="paso2()">2</button>
+<button onclick="paso2()">3</button>
+</div>
+
+<div id="letras" class="oculto">
+<p>Paso 2: Elige una letra</p>
+
+<button onclick="final()">A</button>
+<button onclick="final()">B</button>
+<button onclick="final()">C</button>
+</div>
+
+<div id="mensajeFinal" class="oculto">
+
+<h3>🎁 Resultado</h3>
+
+<p>
+En realidad no importaba el número ni la letra que eligieras...
+<br><br>
+Solo quería aprovechar este pequeño juego para decirte algo:
+<br><br>
+Eres una mujer increíble y tienes una energía muy bonita.
+<br><br>
+Feliz Día de la Mujer 🌸
+</p>
+
+</div>
+
+</div>
+
+<script>
+
+function paso2(){
+document.getElementById("numeros").style.display="none";
+document.getElementById("letras").classList.remove("oculto");
+}
+
+function final(){
+document.getElementById("letras").style.display="none";
+document.getElementById("mensajeFinal").classList.remove("oculto");
+}
+
+</script>
+
+</body>
+</html>
